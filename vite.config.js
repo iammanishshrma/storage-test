@@ -32,6 +32,11 @@ const manifestForPlugin = {
         purpose: "any maskable",
       },
     ],
+    url_handlers: [
+      {
+        origin: "https://storage-test-ten.vercel.app",
+      },
+    ],
     theme_color: "#171717",
     background_color: "#e8ebf2",
     display: "standalone",
