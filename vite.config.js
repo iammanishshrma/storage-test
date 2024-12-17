@@ -2,51 +2,26 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
 const manifestForPlugin = {
-  registerType: "prompt",
-  includeAssets: ["favicon.ico", "apple-touch-icon.png", "masked-icon.svg"],
+  registerType: "autoUpdate",
+  includeAssets: ["vite.svg"],
   manifest: {
     name: "vite pwa",
     short_name: "vite pwa",
     description: "vite pwa",
     icons: [
       {
-        src: "/android-chrome-192x192.png",
+        src: "/vite.svg",
         sizes: "192x192",
-        type: "image/png",
+        type: "image/svg+xml",
       },
       {
-        src: "/android-chrome-512x512.png",
+        src: "/vite.svg",
         sizes: "512x512",
-        type: "image/png",
-      },
-      {
-        src: "/apple-touch-icon.png",
-        sizes: "180x180",
-        type: "image/png",
-        purpose: "apple touch icon",
-      },
-      {
-        src: "/maskable_icon.png",
-        sizes: "225x225",
-        type: "image/png",
-        purpose: "any maskable",
+        type: "image/svg+xml",
       },
     ],
-    url_handlers: [
-      {
-        origin: "https://storage-test-ten.vercel.app",
-      },
-    ],
-    theme_color: "#171717",
-    background_color: "#e8ebf2",
-    display: "standalone",
-    scope: "/",
-    start_url: "/",
-    orientation: "portrait",
   },
 };
-
-// https://vite.dev/config/
 
 export default defineConfig({
   base: "./",
