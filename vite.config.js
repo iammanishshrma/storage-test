@@ -5,9 +5,14 @@ const manifestForPlugin = {
   registerType: "autoUpdate",
   includeAssets: ["vite.svg"],
   manifest: {
-    name: "vite pwa",
-    short_name: "vite pwa",
-    description: "vite pwa",
+    name: "Vite PWA",
+    short_name: "Vite PWA",
+    description: "Vite PWA example",
+    start_url: "/",
+    scope: "/",
+    theme_color: "#ffffff",
+    background_color: "#ffffff",
+    display: "standalone",
     icons: [
       {
         src: "/vite.svg",
